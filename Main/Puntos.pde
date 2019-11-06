@@ -26,13 +26,13 @@ class Puntos{
  longitud = dist(x1, y1, x2, y2);
  distancia = (longitud/10);
  pendiente = ((y2 - y1)/(x2 - x1));
+ println(distancia);
  if(linea){
    dibujarLinea();
  }
 }
  void dibujarLinea(){
- for(float i = x1; i < x2; i = (i + distancia)){
-   if(x1 < x2){
+ for(float i = x1; i < x2; i = (i + 10)){
     p1 = i;
     p2 = ((pendiente*(i-x2)) + y2);
     ellipse(p1, p2, 5, 5);
@@ -40,4 +40,3 @@ class Puntos{
  }
 }
  }
-}
