@@ -13,7 +13,7 @@ int contador;
 
 
 void setup(){
-  JOptionPane.showMessageDialog(null, "Para mostar borado en pantalla, utilice los numeros del 1 al 4");
+  JOptionPane.showMessageDialog(null, "Para mostrar bordado en pantalla utilice los numeros del 1 al 4");
   img1 = loadImage("Bordado1.png");
   img2 = loadImage("Bordado2.png");
   img3 = loadImage("Bordado3.png");
