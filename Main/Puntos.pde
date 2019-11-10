@@ -25,6 +25,12 @@ class Puntos{
   }
  }
 }
+  void generarLinea(){
+      if(linea){
+    line(x1,y1,x2,y2);
+  }
+  
+  }
  void dibujarCirculos(){
  longitud = dist(x1, y1, x2, y2);
  distancia = (longitud/10);

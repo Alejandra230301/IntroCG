@@ -8,7 +8,7 @@ class Botones{
    llamar = p;
    generarTextura1();
   }
-  
+
   void generarTextura1(){
    if (((mouseX > 10) && (mouseY > 5)) && ((mouseX < 90) && (mouseY < 45))){
         if(mousePressed){
