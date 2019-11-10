@@ -23,8 +23,12 @@ void draw(){
  punto.generarPuntos();
  if(!punto.bandera){//Se utiliza el booleano "bandera" de la clase
  //puntos porque este solo es falso cuando ya se generó el segundo punto
- b.actualizarPunto(punto); 
+ b.actualizarPunto(punto);
+ generar.dibujarInterfaz();
+
  }
  }
- 
+
  //hola AYUDA ESTOY AQUI
+
+ 
