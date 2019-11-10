@@ -26,3 +26,5 @@ void draw(){
  b.actualizarPunto(punto); 
  }
  }
+ 
+ //hola AYUDA ESTOY AQUI
