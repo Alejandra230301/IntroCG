@@ -20,6 +20,7 @@ void draw(){
 }
 
  void mousePressed(){
+
  punto.generarPuntos();
  if(!punto.bandera){
   
