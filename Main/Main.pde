@@ -1,10 +1,7 @@
 Puntos punto;
 Interfaz generar;
 Botones b;
-
 boolean bandera;
-
-int contador;
 
 
 void setup(){
