@@ -1,6 +1,6 @@
 class Puntos{
  float x1, y1, x2, y2, longitud, distancia, pendiente, p1, p2;
- boolean bandera, linea,TerminarLinea,boton;
+ boolean bandera, linea,TerminarLinea;
 
  Puntos (){
   x1 = 0;
