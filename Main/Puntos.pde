@@ -10,7 +10,9 @@ class Puntos{
 
  }
 
- void generarPuntos(){//Actualiza a coordenada de los puntos 
+ void generarPuntos(){
+   linea=false;
+   //Actualiza a coordenada de los puntos 
  //inicial y se sabe que no es la segunda coordenada por la condicional bandera
    if(mouseButton == LEFT && !bandera){
      x1 = mouseX;
@@ -32,25 +34,29 @@ class Puntos{
   
   }
  void dibujarCirculos(){
+ 
  longitud = dist(x1, y1, x2, y2);
  distancia = (longitud/10);
- pendiente = ((y2 - y1)/(x2 - x1));
- for(float i = x1; i < x2; i = (i + 10)){
+   pendiente = ((y2 - y1)/(x2 - x1));
+   
+   for(float i = x1; i < x2; i = (i + 10)){
     p1 = i;
     p2 = ((pendiente*(i-x2)) + y2);
     ellipse(p1, p2, 5, 5);
+     
  }
 }
  void Textura2(){
   longitud = dist(x1, y1, x2, y2);
  distancia = (longitud/10);
  pendiente = ((y2 - y1)/(x2 - x1));
+ if(linea){
   for(float i = x1; i < x2; i = (i + 10)){
     p1 = i;
     p2 = ((pendiente*(i-x2)) + y2);
   stroke(255);
   ellipse(p1, p2, 5, 5);
-  }
+  }}
      }  
      
  void Textura3(){
