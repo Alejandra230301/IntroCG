@@ -60,6 +60,7 @@ class Puntos{
     for(float i = x1; i < x2; i = (i + 10)){
     p1 = i;
     p2 = ((pendiente*(i-x2)) + y2);
+    
     line(p1-7,p2-7,p1+7,p2+7);
     }
   } 

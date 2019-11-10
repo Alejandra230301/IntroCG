@@ -6,10 +6,45 @@ class Botones{
   }
   void actualizarPunto(Puntos p){
    llamar = p;
-   generarTextura1();
+   generarBotones();
   }
 
-  void generarTextura1(){
+
+void generarBotones(){
+ if (((mouseX > 10) && (mouseY > 5)) && ((mouseX < 90) && (mouseY < 45))){
+        if(mousePressed){
+        Textura1 = true;
+        Textura2 = false;
+        Textura3 = false;
+        Textura4 = false;
+        Textura5 = false;
+        Textura6 = false;
+        }
+   }
+ 
+   else  if (((mouseX > 10) && (mouseY > 5)) && ((mouseX < 180) && (mouseY < 45))){
+        if(mousePressed){
+        Textura1 = false;
+        Textura2 = true;
+        Textura3 = false;
+        Textura4 = false;
+        Textura5 = false;
+        Textura6 = false;
+        }
+   }
+      if(Textura1){
+        llamar.dibujarCirculos();
+        }
+    if(Textura2){
+        llamar.Textura3();
+        }
+   }         
+    
+   }
+
+
+
+ /* void generarTextura1(){
    if (((mouseX > 10) && (mouseY > 5)) && ((mouseX < 90) && (mouseY < 45))){
         if(mousePressed){
         Textura1 = true;
@@ -23,8 +58,9 @@ class Botones{
     if(Textura1){
         llamar.dibujarCirculos();
         }
-   }
-   void generarTextura2(){
+ }
+ */  
+ /*void generarTextura2(){
    if (((mouseX > 10) && (mouseY > 5)) && ((mouseX < 180) && (mouseY < 45))){
         if(mousePressed){
         Textura1 = false;
@@ -39,4 +75,4 @@ class Botones{
         llamar.Textura3();
         }
    }   
-}
+}*/
