@@ -1,7 +1,7 @@
 class Interfaz{
-  Puntos llamar;
+  Botones b;
   Interfaz(){
-    llamar = new Puntos();
+    b = new Botones();
   }
   
   void dibujarInterfaz(){
@@ -32,10 +32,5 @@ class Interfaz{
   fill(220,250,100);
   rect(460, 55, 50, 40);  
   }
-  void generarBordados(){
-    
-    
-    
-    
-  }
-}
+ }
+ 
