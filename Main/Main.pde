@@ -1,13 +1,21 @@
+PImage img1;
+PImage img2;
+PImage img3;
+PImage img4;
 Puntos punto;
 Interfaz generar;
 Botones b;
-
+boolean firstLinea = false;
 boolean bandera;
 
 int contador;
 
 
 void setup(){
+  img1 = loadImage("Bordado1.png");
+  img2 = loadImage("Bordado2.png");
+  img3 = loadImage("Bordado3.png");
+  img4 = loadImage("Bordado4.jpg");
   size(600,600);
   background(255);
   generar = new Interfaz();
@@ -16,7 +24,12 @@ void setup(){
   generar.dibujarInterfaz();
 }
 void draw(){
-  
+    generar.dibujarInterfaz();
+  if (firstLinea){
+    updatePixels();
+    generar.dibujarInterfaz();
+    loadPixels();
+  }
 }
 
  void mousePressed(){
@@ -28,6 +41,34 @@ void draw(){
    generar.dibujarInterfaz();
  }
  }
+<<<<<<< Updated upstream
+=======
+ void keyPressed(){
+  if(keyPressed && key=='1'){
+  background(img1);
+  loadPixels();
+     updatePixels();
+  }
+    if(keyPressed && key=='2'){
+  background(img2);
+  loadPixels();
+     updatePixels();
+  }
+    if(keyPressed && key=='3'){
+  background(img3);
+  loadPixels();
+     updatePixels();
+  }
+    if(keyPressed && key=='4'){
+  background(img4);
+  loadPixels();
+     updatePixels();
+  }
+ }
+
+ //hola AYUDA ESTOY AQUI
+
+>>>>>>> Stashed changes
  
  //hola AYUDA ESTOY AQUI
  //espero funcione
