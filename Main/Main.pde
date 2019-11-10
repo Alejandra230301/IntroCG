@@ -8,7 +8,6 @@ Botones b;
 boolean firstLinea = false;
 boolean bandera;
 
-int contador;
 
 
 void setup(){
@@ -40,9 +39,8 @@ void draw(){
    punto.generarLinea();
    generar.dibujarInterfaz();
  }
- }
-<<<<<<< Updated upstream
-=======
+}
+
  void keyPressed(){
   if(keyPressed && key=='1'){
   background(img1);
@@ -65,10 +63,3 @@ void draw(){
      updatePixels();
   }
  }
-
- //hola AYUDA ESTOY AQUI
-
->>>>>>> Stashed changes
- 
- //hola AYUDA ESTOY AQUI
- //espero funcione

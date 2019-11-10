@@ -1,7 +1,7 @@
 class Interfaz{
-  Botones b;
+
   Interfaz(){
-    b = new Botones();
+
   }
   
   void dibujarInterfaz(){
