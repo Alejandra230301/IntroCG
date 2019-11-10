@@ -1,3 +1,4 @@
+import javax.swing.JOptionPane;
 PImage img1;
 PImage img2;
 PImage img3;
@@ -12,6 +13,7 @@ int contador;
 
 
 void setup(){
+  JOptionPane.showMessageDialog(null, "Para mostar borado en pantalla, utilice los numeros del 1 al 4");
   img1 = loadImage("Bordado1.png");
   img2 = loadImage("Bordado2.png");
   img3 = loadImage("Bordado3.png");
@@ -41,8 +43,7 @@ void draw(){
    generar.dibujarInterfaz();
  }
  }
-<<<<<<< Updated upstream
-=======
+
  void keyPressed(){
   if(keyPressed && key=='1'){
   background(img1);
@@ -65,11 +66,3 @@ void draw(){
      updatePixels();
   }
  }
-
- //hola AYUDA ESTOY AQUI
-
->>>>>>> Stashed changes
- 
- //hola AYUDA ESTOY AQUI
- //espero funcione
- //prueba dani
