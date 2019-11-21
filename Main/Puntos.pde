@@ -1,5 +1,5 @@
 class Puntos{
- float x1, y1, x2, y2, longitud, distancia, pendiente, p1, p2;
+ float x1, y1, x2, y2, longitud, distancia, pendiente, p1, p2,temp;
  boolean bandera, linea,TerminarLinea;
 
  Puntos (){
@@ -27,60 +27,115 @@ class Puntos{
   }
  }
 }
+
+
+
   void generarLinea(){
-      if(linea){
+     
     line(x1,y1,x2,y2);
   }
   
-  }
- void dibujarCirculos(){
+  
+ void texturaCirculos(){
  
  longitud = dist(x1, y1, x2, y2);
  distancia = (longitud/10);
-   pendiente = ((y2 - y1)/(x2 - x1));
+ pendiente = ((y2 - y1)/(x2 - x1));
    
    for(float i = x1; i < x2; i = (i + 10)){
+     noStroke();
+     fill(234,26,34);
     p1 = i;
     p2 = ((pendiente*(i-x2)) + y2);
     ellipse(p1, p2, 5, 5);
      
  }
 }
- void Textura2(){
+ void texturaHilo(){
   longitud = dist(x1, y1, x2, y2);
  distancia = (longitud/10);
  pendiente = ((y2 - y1)/(x2 - x1));
  if(linea){
+   beginShape();
+   noFill();
+   vertex(x1,y1);
   for(float i = x1; i < x2; i = (i + 10)){
     p1 = i;
     p2 = ((pendiente*(i-x2)) + y2);
-  stroke(255);
-  ellipse(p1, p2, 5, 5);
-  }}
-     }  
+    stroke(30,230,200);
+    line(p1,p2,p1+5,p2-5);
+    line(p1,p2,p1+5,p2+5);
+   
+  }  endShape();
+
+}
+}  
      
- void Textura3(){
+ void texturaLineas(){
  longitud = dist(x1, y1, x2, y2);
  distancia = (longitud/10);
  pendiente = ((y2 - y1)/(x2 - x1));
     for(float i = x1; i < x2; i = (i + 10)){
     p1 = i;
     p2 = ((pendiente*(i-x2)) + y2);
-    
-    line(p1-7,p2-7,p1+7,p2+7);
+    line(p1-3,p2-3,p1+3,p2+3);
+    line(p1-3,p2+3,p1+3,p2-3);
     }
   } 
-     
- void Textura4(){ 
-   longitud = dist(x1, y1, x2, y2);
+ void texturaFlores(){
+ longitud = dist(x1, y1, x2, y2);
  distancia = (longitud/10);
  pendiente = ((y2 - y1)/(x2 - x1));
-   for(float i = x1; i < x2; i = (i + 10)){
+  beginShape();
+   noFill();
+   vertex(x1,y1);
+    for(float i = x1; i < x2; i = (i + 10)){
     p1 = i;
     p2 = ((pendiente*(i-x2)) + y2);
- beginShape();
- bezierVertex(p1, p2, p2, p1, distancia, distancia);
- endShape();
-     } 
- }   
+    stroke(230,100,90);
+    bezierVertex(p1,p2+10,p1+10,p2,p1,p2);
+   bezierVertex(p1+10,p2,p1,p2-10,p1,p2);
+   bezierVertex(p1,p2-10,p1-10,p2,p1,p2);
+   bezierVertex(p1-10,p2,p1,p2+10,p1,p2);
+    }endShape();
+  }
+  
+   void texturaCurvas(){
+  longitud = dist(x1, y1, x2, y2);
+ distancia = (longitud/10);
+ pendiente = ((y2 - y1)/(x2 - x1));
+ if(linea){
+   beginShape();
+   noFill();
+   vertex(x1,y1);
+  for(float i = x1; i < x2; i = (i + 10)){
+    p1 = i;
+    p2 = ((pendiente*(i-x2)) + y2);
+     stroke(30,100,290);
+    bezierVertex(p1,p2-10,p1+10,p2-20,p1+10,p2-10);
+    bezierVertex(p1,p2+10,p1+10,p2,p1+10,p2-10);
+  }  endShape();
+ }
+
+}
+  void texturaHojas(){
+    longitud = dist(x1, y1, x2, y2);
+   distancia = (longitud/10);
+   pendiente = ((y2 - y1)/(x2 - x1));
+   if(linea){
+    for(float i = x1; i < x2; i = (i + 10)){
+    beginShape();
+     noFill();
+      p1 = i;
+      p2 = ((pendiente*(i-x2)) + y2);
+      vertex(p1,p2);
+      bezierVertex(p1,p2,p1+20,p2-10,p1+10,p2-10);
+      bezierVertex(p1+10,p2-10,p1-10,p2,p1,p2);
+     
+      endShape();
+  }  
+ }
+
+}
+ 
 }

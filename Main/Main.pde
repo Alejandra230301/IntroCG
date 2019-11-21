@@ -30,10 +30,12 @@ void draw(){
  if((((mouseX > 0) && (mouseY > 100)) && ((mouseX < 600) && (mouseY < 600)))){
          punto.generarPuntos();
           if((!punto.bandera)){ 
-           b.actualizarPunto(punto);
-          punto.generarLinea();
+          b.actualizarPunto(punto);
           generar.dibujarInterfaz();
+          punto.generarLinea();
+           
           loadPixels();
+         
           }
          
      }
