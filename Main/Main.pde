@@ -18,49 +18,34 @@ void setup(){
   img2 = loadImage("Bordado2.png");
   img3 = loadImage("Bordado3.png");
   img4 = loadImage("Bordado4.jpg");
-  size(600,600);
+  size(750,750);
   background(255);
   generar = new Interfaz();
   b = new Botones();
   punto = new Puntos();
   generar.dibujarInterfaz();
 }
-void draw(){
+void draw(){ 
   if (firstLinea){
-    updatePixels();
     generar.dibujarInterfaz();
-    loadPixels();
   }
 }
 
- void mousePressed(){
-     
- if((((mouseX > 0) && (mouseY > 100)) && ((mouseX < 600) && (mouseY < 600)))){
+ void mousePressed(){   
+ if((((mouseX > 0) && (mouseY > 143)) && ((mouseX < 600) && (mouseY < 600)))){
          punto.generarPuntos();
           if((!punto.bandera)){ 
           b.actualizarPunto(punto);
           generar.dibujarInterfaz();
-          punto.generarLinea();
-           
-          loadPixels();
-         
+          punto.generarLinea();       
           }
          
      }
      else {
          b.actualizarPunto(punto);
-     }
-     updatePixels();
-    
+     } 
  }
- 
- 
- //kkk
-
-
-
-
- void keyPressed(){
+  void keyPressed(){
   if(keyPressed && key=='1'){
   background(img1);
   loadPixels();
@@ -83,4 +68,9 @@ void draw(){
     }
  
  }
+ 
+
+
+
+
  
