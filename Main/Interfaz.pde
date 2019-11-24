@@ -5,6 +5,7 @@ class Interfaz{
   void dibujarInterfaz(){
   interfaz = loadImage("Interfaz.jpg");
   image(interfaz,0,0);
+  updatePixels();
   }
  }
  

@@ -27,7 +27,9 @@ void setup(){
 }
 void draw(){ 
   if (firstLinea){
+    loadPixels();
     generar.dibujarInterfaz();
+    updatePixels();
   }
 }
 
@@ -37,7 +39,8 @@ void draw(){
           if((!punto.bandera)){ 
           b.actualizarPunto(punto);
           generar.dibujarInterfaz();
-          punto.generarLinea();       
+          punto.generarLinea(); 
+          loadPixels();
           }
          
      }
