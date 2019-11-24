@@ -44,6 +44,7 @@ class Puntos{
   }
     void generarLinea(){
     line(x1,y1,x2,y2);
+    loadPixels();
   }
   
   
@@ -56,7 +57,7 @@ class Puntos{
     p1 = i;
     p2 = ((pendiente*(i-x2)) + y2);
     ellipse(p1, p2, 5, 5);
-     
+    loadPixels();
  }
 }
  void texturaHilo(){
@@ -72,7 +73,7 @@ class Puntos{
     p2 = ((pendiente*(i-x2)) + y2);
     line(p1,p2,p1+5,p2-5);
     line(p1,p2,p1+5,p2+5);
-   
+   loadPixels();
   }  endShape();
 
 }
@@ -88,6 +89,7 @@ class Puntos{
     p2 = ((pendiente*(i-x2)) + y2);
     line(p1-3,p2-3,p1+3,p2+3);
     line(p1-3,p2+3,p1+3,p2-3);
+    loadPixels();
     }
   } 
  void texturaFlores(){
@@ -104,7 +106,9 @@ class Puntos{
    bezierVertex(p1+10,p2,p1,p2-10,p1,p2);
    bezierVertex(p1,p2-10,p1-10,p2,p1,p2);
    bezierVertex(p1-10,p2,p1,p2+10,p1,p2);
-    }endShape();
+    }
+    endShape();
+    loadPixels();
   }
   
    void texturaCurvas(){
@@ -120,7 +124,9 @@ class Puntos{
     p2 = ((pendiente*(i-x2)) + y2);
     bezierVertex(p1,p2-10,p1+10,p2-20,p1+10,p2-10);
     bezierVertex(p1,p2+10,p1+10,p2,p1+10,p2-10);
-  }  endShape();
+  }  
+  endShape();
+  loadPixels();
  }
 
 }
@@ -138,6 +144,7 @@ class Puntos{
       bezierVertex(p1,p2,p1+20,p2-10,p1+10,p2-10);
       bezierVertex(p1+10,p2-10,p1-10,p2,p1,p2);
       endShape();
+      loadPixels();
   }  
  }
 
