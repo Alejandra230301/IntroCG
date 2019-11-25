@@ -1,17 +1,17 @@
 class Botones{
   Puntos llamar;
   boolean Textura1, Textura2, Textura3, Textura4, Textura5, Textura6;
-  int R, G, B, distancia;
-  
+    int R, G, B, distancia;
   Botones(){
-    distancia = 10;
+    distancia = 0;
   }
   void actualizarPunto(Puntos p){
+
    llamar = p;
    generarBotones();
-   botonesColor();
-   cambiarDistancia();
+   
    botonBorrar();
+
   }
 
 
@@ -78,34 +78,7 @@ void generarBotones(){
         Textura6 = true;
         }
       }
-   
-      if(Textura1){
-        llamar.texturaCirculos();
-        }
-    if(Textura2){
-        llamar.texturaHilo();
-        }
-        if(Textura3){
-        llamar.texturaLineas();
-        }
-         if(Textura4){
-        llamar.texturaFlores();
-        }
-          if(Textura5){
-         llamar.texturaCurvas();
-        }
-           if(Textura6){
-      llamar.texturaHojas();
-        }
-   }
-   void botonesColor(){
-      Textura1 = false;
-      Textura2 = false;
-      Textura3 = false;
-      Textura4 = false;
-      Textura5 = false;
-      Textura6 = false;
-     if (((mouseX > 484) && (mouseY > 31)) && ((mouseX < 522) && (mouseY < 68))){
+      if (((mouseX > 484) && (mouseY > 31)) && ((mouseX < 522) && (mouseY < 68))){
         if(mousePressed){
           R = 255;
           G = 86;
@@ -169,33 +142,51 @@ void generarBotones(){
           llamar.cambiarColor(R,G,B);
    }
   }
- }
- void cambiarDistancia(){
-      Textura1 = false;
-      Textura2 = false;
-      Textura3 = false;
-      Textura4 = false;
-      Textura5 = false;
-      Textura6 = false;
-     if (((mouseX > 306) && (mouseY > 23)) && ((mouseX < 375) && (mouseY < 56))){
+       if (((mouseX > 306) && (mouseY > 23)) && ((mouseX < 375) && (mouseY < 56))){
         if(mousePressed){
-          distancia = (distancia - 1);
+          distancia = (distancia - 3);
           llamar.cambiarDistancia(distancia);
  }
 }
      if (((mouseX > 306) && (mouseY > 73)) && ((mouseX < 375) && (mouseY < 106))){
         if(mousePressed){
-          distancia = (distancia + 1);
+          distancia = (distancia + 3);
           llamar.cambiarDistancia(distancia);
   }
+     }
+  if(Textura1){
+        llamar.texturaCirculos();
+        }
+    if(Textura2){
+        llamar.texturaHilo();
+        }
+        if(Textura3){
+        llamar.texturaLineas();
+        }
+         if(Textura4){
+        llamar.texturaFlores();
+        }
+          if(Textura5){
+         llamar.texturaCurvas();
+        }
+           if(Textura6){
+      llamar.texturaHojas();
+        }
+        
  }
-}
+
  void botonBorrar(){
      if (((mouseX > 409) && (mouseY > 40)) && ((mouseX < 457) && (mouseY < 107))){
         if(mousePressed){
+          noStroke();
          fill(255);
         rect(0, 143, 750, 607);
+        loadPixels();
+        stroke(R,G,B);
         }
    } 
  }
-}
+ }
+
+
+ 
