@@ -11,7 +11,7 @@ boolean bandera;
 
 
 void setup(){
-  size(750,750);
+  size(850,850);
   background(255);
   generar = new Interfaz();
   b = new Botones();

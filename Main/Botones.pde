@@ -1,16 +1,17 @@
 class Botones{
   Puntos llamar;
   boolean Textura1, Textura2, Textura3, Textura4, Textura5, Textura6;
-    int R, G, B, distancia;
+    int R, G, B, distancia, tamano;
   Botones(){
     distancia = 0;
+    tamano = 0;
   }
   void actualizarPunto(Puntos p){
 
    llamar = p;
    generarBotones();
-   
    botonBorrar();
+   botonTamano();
 
   }
 
@@ -186,7 +187,23 @@ void generarBotones(){
         }
    } 
  }
+ void botonTamano(){
+   if (((mouseX > 757) && (mouseY > 31)) && ((mouseX < 841) && (mouseY < 64))){
+        if(mousePressed){
+          tamano = tamano + 1;
+          println("entro");
+          llamar.cambiarTamano(tamano);
  }
+ }
+    if (((mouseX > 756) && (mouseY > 82)) && ((mouseX < 840) && (mouseY < 115))){
+        if(mousePressed){
+          tamano = tamano - 1;
+          println("entro");
+          llamar.cambiarTamano(tamano);
+ }
+ }
+ }
+}
 
 
  
