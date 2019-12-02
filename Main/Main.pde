@@ -18,9 +18,9 @@ void setup(){
   punto = new Puntos();
   generar.dibujarInterfaz();
   JOptionPane.showMessageDialog(null, "Para mostrar bordado en pantalla utilice los numeros del 1 al 4");
-  img1 = loadImage("Bordado1.png");
-  img2 = loadImage("Bordado2.png");
-  img3 = loadImage("Bordado3.png");
+  img1 = loadImage("Bordado1.jpg");
+  img2 = loadImage("Bordado2.jpg");
+  img3 = loadImage("Bordado3.jpg");
   img4 = loadImage("Bordado4.jpg");
 }
 void draw(){
@@ -52,23 +52,23 @@ void draw(){
 
  void keyPressed(){
   if(keyPressed && key=='1'){
-   background(img2);
+   background(img1);
     loadPixels();
- 
+
   }
     if(keyPressed && key=='2'){
   background(img2);
   loadPixels();
-     updatePixels();
+     
   }
     if(keyPressed && key=='3'){
   background(img3);
     loadPixels();
-     updatePixels();
+     
   }
     if(keyPressed && key=='4'){
   background(img4);
   loadPixels();
-     updatePixels();
+    
   }
  } 

@@ -181,6 +181,7 @@ void generarBotones(){
         if(mousePressed){
           noStroke();
          fill(255);
+
         rect(0, 143, 850, 707);
         loadPixels();
         stroke(R,G,B);
