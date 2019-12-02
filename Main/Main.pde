@@ -54,7 +54,7 @@ void draw(){
   if(keyPressed && key=='1'){
    background(img2);
     loadPixels();
-     updatePixels();
+ 
   }
     if(keyPressed && key=='2'){
   background(img2);
